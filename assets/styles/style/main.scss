@@ -1,0 +1,76 @@
+@import './index';
+
+$container-padding: $padding;
+$temperature-current-degree-color: $primary-text-color;
+$sun-size: 20rem;
+
+html{
+    font-size:62.5%;
+    font-family: 'Roboto-regular';
+}
+
+body{
+    font-size: 1.6rem; 
+    // overflow: hidden;
+
+}
+
+h1,h2,h3,h4,h5,h6,strong,b{
+    font-family: 'Roboto-bold';
+}
+
+ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+figure{
+    margin: 0;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+.container{
+    background: rgb(48,132,211);
+    background: linear-gradient(42deg, rgba(48,132,211,1) 0%, rgba(66,161,241,1) 39%, rgba(20,60,121,1) 100%);
+    min-height: 100vh;
+    // height: 100vh;
+    
+}
+
+.wrapper{
+    margin: 0 auto;
+    max-width: 1400px ;
+    padding: $container-padding;
+
+}
+
+input{
+    font-size: 1.8rem;
+}
+
+.temperature{
+    display: flex;
+    flex-direction: column-reverse;
+
+      //DESKTOP AND TABLET 
+      @media screen and (min-width: 768px){
+          flex-direction: row;
+    }
+    // @include tablet-desktop {
+    //     flex-direction: row;
+    // }
+
+    &__current-degree{
+        font-size: 3.2rem;
+        color: $temperature-current-degree-color;
+    }
+}
+
+.sun{
+    margin: 2.4rem auto;
+    width: $sun-size;
+
+}

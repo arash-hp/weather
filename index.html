@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <link rel="stylesheet" href="./assets/styles/style/main.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <style>
+        /* .btn {
+            position: absolute;
+            right:0;
+            top: 8px;
+            background: transparent;
+            border: none;
+            font-size: 3.5rem;
+        } */
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <div class="wrapper">
+            <div class="search">
+                <div>
+                    <input type="search" id="city-name" class="search__input" oninput="searchCities(event)" onblur="handleInputBlur(event)" onfocus="handelInputFocus()">
+                    <div class="search__suggestion"></div>
+                    <!-- <button id="btn-search" class="fas fa-search btn"></button> -->
+                </div>
+            </div>
+            <div class="temperature margin-bottom-40">
+                <article class="city-temperature">
+                    <h1 class="city-temperature__title margin-top-16">Dubai, AE</h1>
+                    <span class="city-temperature__current-day">Thursday</span>
+                    <ul class="margin-top-16">
+                        <li class="info">
+                            <figure class="info__icon margin-right-8"><img src="./assets/img/water-drop.svg" alt="">
+                            </figure>
+                            <span class="info__description humidity">39%</span>
+                        </li>
+                        <li class="info">
+                            <figure class="info__icon margin-right-8"><img src="./assets/img/water-drop.svg" alt="">
+                            </figure>
+                            <span class="info__description wind">West, 7.7 m/s</span>
+                        </li>
+                        <li class="info">
+                            <figure class="info__icon margin-right-8"><img src="./assets/img/water-drop.svg" alt="">
+                            </figure>
+                            <span class="info__description pressure">1000 hpa</span>
+                        </li>
+                    </ul>
+                </article>
+                <figure class="sun "><img class="weather__icon" alt="weather__icon" src="./assets/img/header-sun.svg"></figure>
+                <div class="text-center temperature__current-degree margin-top-16">+37°c</div>
+            </div>
+            <section>
+                <ul class="cards__wrapper">
+                    <li class="card--shadow">
+                        <figure class="card__icon"><img class="icon-day-1" src="./assets/img/header-sun.svg" alt=""></figure>
+                        <div class="card__title text-center margin-bottom-24 city-day-card1">Friday</div>
+                        <div class="card__description text-center city-degree-1">+36 °c</div>
+                    </li>
+                    <li class="card--shadow">
+                        <figure class="card__icon"><img class="icon-day-2" src="./assets/img/header-sun.svg" alt=""></figure>
+                        <div class="card__title text-center margin-bottom-24 city-day-card2">Friday</div>
+                        <div class="card__description text-center city-degree-2">+36 °c</div>
+                    </li>
+                    <li class="card--shadow">
+                        <figure class="card__icon"><img class="icon-day-3" src="./assets/img/header-sun.svg" alt=""></figure>
+                        <div class="card__title text-center margin-bottom-24 city-day-card3">Friday</div>
+                        <div class="card__description text-center city-degree-3">+36 °c</div>
+                    </li>
+                    <li class="card--shadow">
+                        <figure class="card__icon"><img class="icon-day-4" src="./assets/img/header-sun.svg" alt=""></figure>
+                        <div class="card__title text-center margin-bottom-24 city-day-card4">Friday</div>
+                        <div class="card__description text-center city-degree-4">+36 °c</div>
+                    </li>
+                    <li class="card--shadow">
+                        <figure class="card__icon"><img class="icon-day-5" src="./assets/img/header-sun.svg" alt=""></figure>
+                        <div class="card__title text-center margin-bottom-24 city-day-card5">Friday</div>
+                        <div class="card__description text-center city-degree-5">+36 °c</div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+    </main>
+
+
+    <script src='./script/city.js'></script>
+    <script src='./script/app.js'></script>
+    <script src='./script/weather.js'></script>
+
+</body>
+
+</html>

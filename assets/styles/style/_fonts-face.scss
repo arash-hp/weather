@@ -1,0 +1,48 @@
+$font-url: 'hw-11/Abdi/assets/fonts';
+$font: 'Roboto';
+$font-name: 'Roboto';
+$font-type: 'ttf';
+$font-format: 'truetype';
+
+
+@font-face{
+    font-family: #{$font};
+    src: url('/hw-11/Abdi/assets/fonts/#{$font}/#{$font-name}-Light.#{$font-type}') format($font-format);
+}
+
+@font-face{
+    font-family: '#{$font}-regular';
+    src: url('/hw-11/Abdi/assets/fonts/#{$font}/#{$font-name}-Regular.#{$font-type}') format($font-format);
+}
+
+@font-face{
+    font-family: '#{$font}-medium';
+    src: url('/hw-11/Abdi/assets/fonts/#{$font}/#{$font-name}-Medium.#{$font-type}') format($font-format);
+}
+
+@font-face{
+    font-family: '#{$font}-bold';
+    src: url('/hw-11/Abdi/assets/fonts/#{$font}/#{$font-name}-Bold.#{$font-type}') format($font-format);
+}
+
+@mixin font($type : '') {
+    @if ($type == ''){
+        font-family: '#{$font}' !important;
+    }@else{
+        font-family: '#{$font}-#{$type}' !important;
+    }
+}
+.font-light{
+    font-family: '#{$font}-light' !important;
+}
+
+.font-regular{
+    font-family: '#{$font}-regular' !important;
+}
+
+.font-medium{
+    font-family: '#{$font}-medium' !important;
+}
+.font-bold{
+    font-family: '#{$font}-bold' !important;
+}
